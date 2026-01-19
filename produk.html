@@ -53,12 +53,13 @@
         .breadcrumb-item a { color: var(--secondary-color); text-decoration: none; }
         .breadcrumb-item.active { color: rgba(255,255,255,0.7); }
 
-        /* Product Card */
+        /* Product Card & Animation */
         .product-card { border: 1px solid #eee; transition: 0.3s; height: 100%; border-radius: 12px; overflow: hidden; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-color: var(--secondary-color); }
-        .product-img-wrapper { position: relative; overflow: hidden; }
+        
         .product-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
         .product-card:hover .product-img { transform: scale(1.1); }
+        
         .price-tag { color: var(--primary-color); font-weight: bold; font-size: 1.1rem; }
         .spec-list { font-size: 0.85rem; color: #666; margin-bottom: 15px; }
         .spec-list li { margin-bottom: 5px; display: flex; align-items: start; }
@@ -156,17 +157,20 @@
     <section class="py-5">
         <div class="container">
             <div class="d-flex align-items-center mb-4">
-                <div class="bg-warning text-dark px-3 py-1 fw-bold me-3 rounded small">KATEGORI</div>
+                <div class="bg-warning text-dark px-3 py-1 fw-bold me-3 rounded-pill small" style="font-size: 0.75rem; letter-spacing: 1px;">KATEGORI</div>
                 <h2 class="fw-bold m-0 text-primary">Kitchen Hood & Exhaust System</h2>
             </div>
             
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="product-img-wrapper ratio ratio-4x3 bg-light">
-                            <img src="img/ducting1.webp" class="product-img" alt="Exhaust Hood Stainless" loading="lazy">
-                            <span class="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 m-3 rounded-pill small fw-bold">Premium</span>
+                        <div class="position-relative overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-light">
+                                <img src="img/ducting1.webp" class="product-img" alt="Exhaust Hood Stainless" loading="lazy">
+                            </div>
+                            <span class="position-absolute top-0 start-0 bg-primary text-white px-2 py-1 m-2 rounded-2 shadow-sm fw-bold" style="font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase;">Premium</span>
                         </div>
+                        
                         <div class="card-body p-4 d-flex flex-column">
                             <h5 class="card-title fw-bold">Exhaust Hood Stainless Steel</h5>
                             <p class="text-muted small">Hood anti karat standar Food Grade untuk restoran dan hotel.</p>
@@ -185,10 +189,13 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="product-img-wrapper ratio ratio-4x3 bg-light">
-                            <img src="img/ducting2.webp" class="product-img" alt="Exhaust Hood BJLS" loading="lazy">
-                            <span class="position-absolute top-0 start-0 bg-warning text-dark px-3 py-1 m-3 rounded-pill small fw-bold">Ekonomis</span>
+                        <div class="position-relative overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-light">
+                                <img src="img/ducting2.webp" class="product-img" alt="Exhaust Hood BJLS" loading="lazy">
+                            </div>
+                            <span class="position-absolute top-0 start-0 bg-warning text-dark px-2 py-1 m-2 rounded-2 shadow-sm fw-bold" style="font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase;">Ekonomis</span>
                         </div>
+
                         <div class="card-body p-4 d-flex flex-column">
                             <h5 class="card-title fw-bold">Exhaust Hood BJLS (Galvanis)</h5>
                             <p class="text-muted small">Solusi ekonomis untuk dapur katering atau warung makan.</p>
@@ -207,8 +214,10 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="product-img-wrapper ratio ratio-4x3 bg-light">
-                            <img src="img/ducting3.webp" class="product-img" alt="Grease Trap" loading="lazy">
+                        <div class="position-relative overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-light">
+                                <img src="img/ducting3.webp" class="product-img" alt="Grease Trap" loading="lazy">
+                            </div>
                         </div>
                         <div class="card-body p-4 d-flex flex-column">
                             <h5 class="card-title fw-bold">Grease Trap (Penyaring Lemak)</h5>
@@ -232,16 +241,20 @@
     <section class="py-5 bg-light">
         <div class="container">
             <div class="d-flex align-items-center mb-4">
-                <div class="bg-primary text-white px-3 py-1 fw-bold me-3 rounded small">KATEGORI</div>
+                <div class="bg-primary text-white px-3 py-1 fw-bold me-3 rounded-pill small" style="letter-spacing: 1px; font-size: 0.7rem;">KATEGORI</div>
                 <h2 class="fw-bold m-0 text-primary">Material Ducting (AC & Fresh Air)</h2>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="product-img-wrapper ratio ratio-4x3 bg-white">
-                            <img src="img/ducting4.webp" class="product-img" alt="Ducting PU" loading="lazy">
+                        <div class="position-relative overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-white">
+                                <img src="img/ducting4.webp" class="product-img" alt="Ducting PU" loading="lazy">
+                            </div>
+                            <span class="position-absolute top-0 start-0 bg-primary text-white px-2 py-1 m-2 rounded-2 shadow-sm fw-bold" style="font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase;">Best Seller</span>
                         </div>
+
                         <div class="card-body p-4 d-flex flex-column">
                             <h5 class="card-title fw-bold">Ducting PU (Polyurethane)</h5>
                             <p class="text-muted small">Pilihan terbaik untuk AC Central indoor. Ringan dan insulasi tinggi.</p>
@@ -260,8 +273,10 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="product-img-wrapper ratio ratio-4x3 bg-white">
-                            <img src="img/ducting5.webp" class="product-img" alt="Ducting BJLS" loading="lazy">
+                        <div class="position-relative overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-white">
+                                <img src="img/ducting5.webp" class="product-img" alt="Ducting BJLS" loading="lazy">
+                            </div>
                         </div>
                         <div class="card-body p-4 d-flex flex-column">
                             <h5 class="card-title fw-bold">Ducting BJLS (Seng)</h5>
@@ -281,20 +296,24 @@
 
                  <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="product-img-wrapper ratio ratio-4x3 bg-white">
-                            <img src="img/ducting6.webp" class="product-img" alt="Ducting BJLS" loading="lazy">
+                        <div class="position-relative overflow-hidden">
+                            <div class="ratio ratio-4x3 bg-white">
+                                <div class="d-flex align-items-center justify-content-center h-100 bg-secondary text-white w-100">
+                                    <i class="bi bi-gear-wide-connected fs-1"></i>
+                                </div>
+                            </div>
                         </div>
                         <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="card-title fw-bold">Ducting BJLS (Seng)</h5>
-                            <p class="text-muted small">Kuat dan tahan lama. Cocok untuk Exhaust, Fresh Air, dan area industri.</p>
+                            <h5 class="card-title fw-bold">Volume Damper</h5>
+                            <p class="text-muted small">Komponen pengatur debit udara di dalam saluran ducting.</p>
                             <ul class="list-unstyled spec-list">
-                                <li><i class="bi bi-check2"></i> Material: Baja Lapis Seng</li>
-                                <li><i class="bi bi-check2"></i> Ketebalan: 0.5mm - 1.2mm</li>
-                                <li><i class="bi bi-check2"></i> Bentuk: Kotak (Square) / Spiral</li>
+                                <li><i class="bi bi-check2"></i> Tipe: Square / Round Damper</li>
+                                <li><i class="bi bi-check2"></i> Material: BJLS / Stainless</li>
+                                <li><i class="bi bi-check2"></i> Kontrol: Manual Handle / Motorized</li>
                             </ul>
                             <div class="mt-auto">
-                                <p class="price-tag mb-3">Rp 300.000 - 450.000 <span class="text-muted fw-normal fs-6">/ m²</span></p>
-                                <a href="https://wa.me/6285210620252?text=Saya%20minat%20Ducting%20BJLS" class="btn btn-outline-dark w-100 rounded-pill">Pesan Sekarang</a>
+                                <p class="price-tag mb-3">Rp 350.000 <span class="text-muted fw-normal fs-6">/ unit</span></p>
+                                <a href="https://wa.me/6285210620252?text=Saya%20minat%20Volume%20Damper" class="btn btn-outline-dark w-100 rounded-pill">Pesan Sekarang</a>
                             </div>
                         </div>
                     </div>
