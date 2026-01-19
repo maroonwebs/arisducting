@@ -53,9 +53,12 @@
         .breadcrumb-item a { color: var(--secondary-color); text-decoration: none; }
         .breadcrumb-item.active { color: rgba(255,255,255,0.7); }
 
-        /* Product Card & Animation */
+        /* Product Card */
         .product-card { border: 1px solid #eee; transition: 0.3s; height: 100%; border-radius: 12px; overflow: hidden; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-color: var(--secondary-color); }
+        
+        .product-img-wrapper { position: relative; overflow: hidden; }
+        /* Hapus class ratio dari wrapper utama di CSS jika ada, biarkan HTML yang handle */
         
         .product-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
         .product-card:hover .product-img { transform: scale(1.1); }
@@ -82,33 +85,31 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "OfferCatalog",
-      "name": "Katalog Produk Ducting",
-      "itemListElement": [
+      "@graph": [
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Ducting Exhaust Kitchen Hood",
-            "description": "Cerobong asap dapur material Stainless/BJLS."
-          },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
+          "@type": "Product",
+          "name": "Ducting Exhaust Kitchen Hood",
+          "description": "Cerobong asap dapur material Stainless/BJLS.",
+          "image": "https://kontraktorducting.web.id/img/ducting1.webp",
+          "offers": {
+            "@type": "Offer",
             "price": "300000",
-            "priceCurrency": "IDR"
+            "priceCurrency": "IDR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://kontraktorducting.web.id/produk.html"
           }
         },
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Ducting PU (Polyurethane)",
-            "description": "Ducting pre-insulated untuk AC Central."
-          },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
+          "@type": "Product",
+          "name": "Ducting PU (Polyurethane)",
+          "description": "Ducting pre-insulated untuk AC Central.",
+          "image": "https://kontraktorducting.web.id/img/ducting4.webp",
+          "offers": {
+            "@type": "Offer",
             "price": "400000",
-            "priceCurrency": "IDR"
+            "priceCurrency": "IDR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://kontraktorducting.web.id/produk.html"
           }
         }
       ]
@@ -164,7 +165,7 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden product-img-wrapper">
                             <div class="ratio ratio-4x3 bg-light">
                                 <img src="img/ducting1.webp" class="product-img" alt="Exhaust Hood Stainless" loading="lazy">
                             </div>
@@ -189,7 +190,7 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden product-img-wrapper">
                             <div class="ratio ratio-4x3 bg-light">
                                 <img src="img/ducting2.webp" class="product-img" alt="Exhaust Hood BJLS" loading="lazy">
                             </div>
@@ -214,7 +215,7 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden product-img-wrapper">
                             <div class="ratio ratio-4x3 bg-light">
                                 <img src="img/ducting3.webp" class="product-img" alt="Grease Trap" loading="lazy">
                             </div>
@@ -248,7 +249,7 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden product-img-wrapper">
                             <div class="ratio ratio-4x3 bg-white">
                                 <img src="img/ducting4.webp" class="product-img" alt="Ducting PU" loading="lazy">
                             </div>
@@ -273,7 +274,7 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden product-img-wrapper">
                             <div class="ratio ratio-4x3 bg-white">
                                 <img src="img/ducting5.webp" class="product-img" alt="Ducting BJLS" loading="lazy">
                             </div>
@@ -296,7 +297,7 @@
 
                  <div class="col-md-6 col-lg-4">
                     <div class="card product-card">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden product-img-wrapper">
                             <div class="ratio ratio-4x3 bg-white">
                                 <div class="d-flex align-items-center justify-content-center h-100 bg-secondary text-white w-100">
                                     <i class="bi bi-gear-wide-connected fs-1"></i>
